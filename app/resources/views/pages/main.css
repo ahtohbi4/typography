@@ -1,3 +1,11 @@
+.typography__radio[value=top]:checked ~ .typography__code .typography__axis_type_top {
+    opacity: 1;
+}
+.typography__code {
+    display: block;
+    margin-bottom: 18px;
+    background: #f7f7f7;
+}
 .typography__font {
     position: relative;
 }
@@ -12,11 +20,11 @@
     position: absolute;
     right: 3px;
     z-index: 1;
-    margin-top: -6px;
+    margin-top: -5px;
     padding: 0 2px;
     color: #f30;
     background: #fff;
-    font-size: 10px;
+    font: 100 10px/12px 'Courier New', Courier, 'Nimbus Mono L';
     white-space: nowrap;
     vertical-align: middle;
     cursor: default;
@@ -30,7 +38,8 @@
     opacity: .7;
     content: '';
 }
-.typography__axis:hover {
+.typography__axis:hover,
+.typography__axis:active {
     z-index: 10;
     color: #f30;
     opacity: 1;
