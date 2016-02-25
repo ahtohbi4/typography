@@ -11,7 +11,10 @@ var PATHS = {
             'app/resources/views/blocks/**/*.css',
             'app/resources/views/pages/**.css'
         ],
-        js: 'app/resources/views/**.js'
+        js: [
+            'app/resources/views/blocks/**/*.js',
+            'app/resources/views/pages/**.js'
+        ]
     },
     dest: {
         html: './',
@@ -38,7 +41,11 @@ gulp.task('css', function () {
         .pipe(gulp.dest(PATHS.dest.css));
 });
 
-gulp.task('js', function () {});
+gulp.task('js', function () {
+    gulp.src(PATHS.src.js)
+        .pipe(concat('script.js'))
+        .pipe(gulp.dest(PATHS.dest.js));
+});
 
 gulp.task('default', [
     'css',
