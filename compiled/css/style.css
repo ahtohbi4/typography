@@ -448,7 +448,7 @@ th {
 }
 
 h1 {
-    font: 100 24px/27px Georgia;
+    font: 100 36px/54px 'Indie Flower', cursive;
 }
 
 .typography__radio[value=top]:checked ~ .typography__code .typography__axis_type_top {
