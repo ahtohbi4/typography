@@ -1,4 +1,4 @@
-.typography {
+.typography__viewport {
     text-align: center;
 }
 .typography__radio[value=top]:checked ~ .typography__code .typography__axis_type_top {
@@ -34,7 +34,7 @@
     content: '';
 }
 .typography__axis:hover,
-.typography__axis:active {
+.typography__axis_active {
     z-index: 10;
     color: #f30;
     opacity: 1;
