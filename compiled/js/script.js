@@ -1,24 +1,25 @@
+define([
+    'jquery'
+], function ($) {
+    'use strict';
 
-// var Typography = function () {}
+    function RadioButton() {}
 
-// Typography.prototype._classes = function (elem) {
-//     return {
-//         viewport: 'typography__viewport'
-//     }[elem];
-// };
+    return RadioButton;
+});
 
-// Typography.prototype.getElem = function (elem) {
-//     return $('.' + this._classes(elem));
-// };
+define([
+    'jquery'
+], function ($) {
+    'use strict';
 
-// Typography.prototype.init = function() {
-// };
+    function Typography() {}
 
-// (function () {
-//     var typography = new Typography();
-// })();
+    return Typography;
+});
 
 require([
-    'blocks/radio-button/radio-button'
-], function (Radio) {
+    'blocks/radio-button/radio-button',
+    'blocks/typography/typography'
+], function (RadioButton, Typography) {
 });

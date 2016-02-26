@@ -1,0 +1,72 @@
+.typography {
+    text-align: center;
+}
+.typography__radio[value=top]:checked ~ .typography__code .typography__axis_type_top {
+    opacity: 1;
+}
+.typography__axis {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    opacity: .2;
+}
+.typography__axis-label {
+    display: none;
+    position: absolute;
+    right: 3px;
+    z-index: 1;
+    margin-top: -5px;
+    padding: 0 2px;
+    color: #f30;
+    background: #fff;
+    font: 100 10px/12px 'Courier New', Courier, 'Nimbus Mono L';
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: default;
+}
+.typography__axis::before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid transparent;
+    opacity: .7;
+    content: '';
+}
+.typography__axis:hover,
+.typography__axis:active {
+    z-index: 10;
+    color: #f30;
+    opacity: 1;
+}
+.typography__axis:hover .typography__axis-label {
+    display: block
+}
+.typography__axis:hover::before {
+    border-top: 1px solid #f30;
+    opacity: 1;
+}
+.typography__axis_type_top {
+    vertical-align: top;
+}
+.typography__axis_type_text-top {
+    vertical-align: text-top;
+}
+.typography__axis_type_superscript-baseline {
+    vertical-align: super;
+}
+.typography__axis_type_middle {
+    vertical-align: middle;
+}
+.typography__axis_type_baseline {
+    vertical-align: baseline;
+}
+.typography__axis_type_subscript-baseline {
+    vertical-align: sub;
+}
+.typography__axis_type_text-bottom {
+    vertical-align: text-bottom;
+}
+.typography__axis_type_bottom {
+    vertical-align: bottom;
+}

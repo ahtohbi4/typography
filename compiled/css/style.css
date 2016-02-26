@@ -454,16 +454,11 @@ h1 {
     font: 100 36px/54px 'Indie Flower', cursive;
 }
 
+.typography {
+    text-align: center;
+}
 .typography__radio[value=top]:checked ~ .typography__code .typography__axis_type_top {
     opacity: 1;
-}
-.typography__code {
-    display: block;
-    margin-bottom: 18px;
-    background: #f7f7f7;
-}
-.typography__font {
-    position: relative;
 }
 .typography__axis {
     display: inline-block;
@@ -531,3 +526,4 @@ h1 {
 .typography__axis_type_bottom {
     vertical-align: bottom;
 }
+
