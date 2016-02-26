@@ -1,5 +1,5 @@
 .radio-button {
-    display: inline-block;
+    display: inline;
 }
 .radio-button__radio {
     display: inline-block;
@@ -8,7 +8,7 @@
 }
 .radio-button__label {
     display: inline-block;
-    padding: 3px 5px;
+    margin-right: 10px;
     text-decoration: underline;
 }
 .radio-button__input {
@@ -17,6 +17,6 @@
     opacity: 0;
 }
 .radio-button__input:checked + .radio-button__label {
-    color: #656565;
+    color: #888;
     text-decoration: none;
 }

@@ -10,16 +10,11 @@ var PATHS = {
             'vendors/normalize.css/*.css',
             'app/resources/views/blocks/**/*.css',
             'app/resources/views/pages/**.css'
-        ],
-        js: [
-            'app/resources/views/blocks/**/*.js',
-            'app/resources/views/pages/**.js'
         ]
     },
     dest: {
         html: './',
-        css: 'compiled/css/',
-        js: 'compiled/js/'
+        css: 'compiled/css/'
     }
 };
 
@@ -41,20 +36,12 @@ gulp.task('css', function () {
         .pipe(gulp.dest(PATHS.dest.css));
 });
 
-gulp.task('js', function () {
-    gulp.src(PATHS.src.js)
-        .pipe(concat('script.js'))
-        .pipe(gulp.dest(PATHS.dest.js));
-});
-
 gulp.task('default', [
     'css',
-    'js',
     'html'
 ]);
 
 gulp.task('watch', ['default'], function() {
-    gulp.watch(PATHS.src.js, ['js']);
     gulp.watch(PATHS.src.css, ['css']);
     gulp.watch(PATHS.src.html, ['html']);
 });

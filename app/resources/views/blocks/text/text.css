@@ -1,3 +1,15 @@
+html,
+button,
+input,
+textarea,
+select {
+    color: #333;
+    font: 18px/27px Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
 h1 {
     font: 100 36px/54px 'Indie Flower', cursive;
+}
+p {
+    margin: 0 0 18px;
 }

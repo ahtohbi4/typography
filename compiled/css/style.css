@@ -428,7 +428,7 @@ th {
 }
 
 .radio-button {
-    display: inline-block;
+    display: inline;
 }
 .radio-button__radio {
     display: inline-block;
@@ -437,7 +437,7 @@ th {
 }
 .radio-button__label {
     display: inline-block;
-    padding: 3px 5px;
+    margin-right: 10px;
     text-decoration: underline;
 }
 .radio-button__input {
@@ -446,12 +446,24 @@ th {
     opacity: 0;
 }
 .radio-button__input:checked + .radio-button__label {
-    color: #656565;
+    color: #888;
     text-decoration: none;
 }
 
+html,
+button,
+input,
+textarea,
+select {
+    color: #333;
+    font: 18px/27px Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
 h1 {
     font: 100 36px/54px 'Indie Flower', cursive;
+}
+p {
+    margin: 0 0 18px;
 }
 
 .typography__viewport {
@@ -524,4 +536,8 @@ h1 {
 }
 .typography__axis_type_bottom {
     vertical-align: bottom;
+}
+
+.main__social {
+    text-align: center;
 }
