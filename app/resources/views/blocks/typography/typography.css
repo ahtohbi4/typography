@@ -33,16 +33,15 @@
     opacity: .7;
     content: '';
 }
-.typography__axis:hover,
 .typography__axis_active {
     z-index: 10;
     color: #f30;
     opacity: 1;
 }
-.typography__axis:hover .typography__axis-label {
+.typography__axis_active .typography__axis-label {
     display: block
 }
-.typography__axis:hover::before {
+.typography__axis_active::before {
     border-top: 1px solid #f30;
     opacity: 1;
 }

@@ -1,6 +1,9 @@
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-21201176-2','auto');ga('send','pageview');
-
-console.log('aaaaaa')
+define([
+    'ga'
+], function () {
+    window.ga('create', 'UA-21201176-2');
+    window.ga('send', 'pageview');
+});
 
 define([
     'jquery'
@@ -18,7 +21,12 @@ define([
     'use strict';
 
     function Typography() {
+        var _this = this;
         this.$block = $('.typography');
+
+        this._getElem('control').click(function () {
+            _this._activateAxis($('.typography__axis_type_' + $(this).val()));
+        });
 
         return this;
     }
@@ -26,8 +34,22 @@ define([
     Typography.prototype._getElem = function(name) {
         return {
             axis: this.$block.find('.typography__axis'),
-            radio: this.$block.find('.typography__radio')
+            control: this.$block.find('.typography__control')
         }[name] || null;
+    };
+
+    Typography.prototype._disactivateAxis = function() {
+        this._getElem('axis').removeClass('typography__axis_active');
+
+        return this;
+    };
+
+    Typography.prototype._activateAxis = function($axis) {
+        this._disactivateAxis();
+
+        $axis.addClass('typography__axis_active');
+
+        return this;
     };
 
     return Typography;
